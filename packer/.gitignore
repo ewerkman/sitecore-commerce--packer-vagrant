@@ -1,0 +1,10 @@
+output/
+
+packer_cache/
+
+vagrantfile
+
+*.box
+
+*.ISO
+*.iso
