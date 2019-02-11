@@ -1,0 +1,1 @@
+Put your Sitecore license.xml here
