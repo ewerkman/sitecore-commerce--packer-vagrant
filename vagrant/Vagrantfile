@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "hv-w16"
+  config.vm.box = "hyperv-windows-2016"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -75,7 +75,6 @@ Vagrant.configure("2") do |config|
     v.cpus = 4
   end
 
-  config.vm.provision "sitecore-xp", type: "shell", path: "scripts/install-sitecore9.ps1"
-
-  config.vm.provision "sitecore-xc", type: "shell", path: "scripts/install-sitecore9-xc.ps1"
+  config.vm.provision "sitecore-xp", type: "shell", path: "scripts/install-sitecore-xp.ps1"
+  config.vm.provision "sitecore-xc", type: "shell", path: "scripts/install-sitecore-xc.ps1"
 end

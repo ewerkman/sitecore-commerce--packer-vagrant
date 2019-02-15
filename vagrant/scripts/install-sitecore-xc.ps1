@@ -7,7 +7,7 @@ Copy-Item -Path "c:\vagrant\files\Sitecore Experience Accelerator 1.8 rev. 18111
 Copy-Item -Path "c:\vagrant\files\Sitecore PowerShell Extensions-4.7.2 for Sitecore 8.zip"  -Destination c:\provision\Sitecore.Commerce.2018.12-2.4.63 -Force
 
 Expand-Archive c:\provision\Sitecore.Commerce.2018.12-2.4.63\SIF.Sitecore.Commerce.1.4.7.zip -DestinationPath c:\provision\Sitecore.Commerce.2018.12-2.4.63\SIF.Sitecore.Commerce.1.4.7 -Force 
-Expand-Archive c:\provision\Sitecore.Commerce.2018.12-2.4.63\Sitecore.BizFX.SDK.1.4.1.zip -DestinationPath c:\provision\Sitecore.Commerce.2018.12-2.4.63\Sitecore.BizFX.SDK.1.4.1 -Force
+Expand-Archive c:\provision\Sitecore.Commerce.2018.12-2.4.63\Sitecore.BizFX.1.4.1.zip -DestinationPath c:\provision\Sitecore.Commerce.2018.12-2.4.63\Sitecore.BizFX.1.4.1 -Force
 Expand-Archive c:\provision\Sitecore.Commerce.2018.12-2.4.63\Sitecore.Commerce.Engine.SDK.2.4.43.zip -DestinationPath c:\provision\Sitecore.Commerce.2018.12-2.4.63\Sitecore.Commerce.Engine.SDK.2.4.43 -Force
 
 Remove-Item c:\provision\Sitecore.Commerce.2018.12-2.4.63\SIF.Sitecore.Commerce.1.4.7.zip

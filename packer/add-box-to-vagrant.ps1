@@ -1,0 +1,1 @@
+vagrant box add hyperv-windows-2016 .\hyperv-windows-2016.box --force

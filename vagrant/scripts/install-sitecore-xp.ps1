@@ -24,8 +24,8 @@ Copy-Item -Path c:\vagrant\files\license\license.xml -Destination c:\provision\l
 Expand-Archive "c:\provision\Sitecore 9.0.2 rev. 180604 (WDP XP0 packages).zip" -DestinationPath "c:\provision\Sitecore 9.0.2 rev. 180604 (WDP XP0 packages)"
 Expand-Archive "c:\provision\Sitecore 9.0.2 rev. 180604 (WDP XP0 packages)\XP0 Configuration files 9.0.2 rev. 180604.zip" -DestinationPath "c:\provision\Sitecore 9.0.2 rev. 180604 (WDP XP0 packages)"
  
-Copy-Item -path c:\vagrant\scripts\Install-Sitecore-9.0.2.ps1 -Destination c:\provision
+Copy-Item -path c:\vagrant\scripts\Deploy-Sitecore-XP.ps1 -Destination c:\provision
 
-c:\provision\Install-Sitecore-9.0.2.ps1
+c:\provision\Deploy-Sitecore-XP.ps1
 
 
