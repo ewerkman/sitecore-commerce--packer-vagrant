@@ -9,7 +9,7 @@
     "iso_url": "iso/Windows_Server_2016_Datacenter_EVAL_en-us_14393_refresh.ISO",
     "iso_checksum_type": "sha1",
     "iso_checksum": "772700802951b36c8cb26a61c040b9a8dc3816a3",
-    "iso_sqlserver": "iso/en_sql_server_2016_developer_with_service_pack_1_x64_dvd_9548071.iso" 
+    "iso_sqlserver": "iso/en_sql_server_2017_developer_x64_dvd_11296168.iso" 
   },
   "builders": [
     {

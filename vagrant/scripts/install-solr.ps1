@@ -1,11 +1,11 @@
 Param(
-    $solrVersion = "6.6.2",
+    $solrVersion = "7.2.1",
     $installFolder = "c:\solr",
     $solrPort = "8983",
     $solrHost = "solr",
     $solrSSL = $true,
     $nssmVersion = "2.24",
-    $JREVersion = "1.8.0_181"
+    $JREVersion = "1.8.0_191"
 )
 
 $JREPath = "C:\Program Files\Java\jre$JREVersion" ## Note that if you're running 32bit java, you will need to change this path
@@ -51,8 +51,8 @@ $solrZip = "$downloadFolder\$solrName.zip"
 downloadAndUnzipIfRequired "Solr" $solrRoot $solrZip $solrPackage $installFolder
 
 # download & extract the nssm archive to the right folder
-$nssmZip = "$downloadFolder\nssm-$nssmVersion.zip"
-downloadAndUnzipIfRequired "NSSM" $nssmRoot $nssmZip $nssmPackage $installFolder
+# $nssmZip = "$downloadFolder\nssm-$nssmVersion.zip"
+# downloadAndUnzipIfRequired "NSSM" $nssmRoot $nssmZip $nssmPackage $installFolder
 
 # Ensure Java environment variable
 $jreVal = [Environment]::GetEnvironmentVariable("JAVA_HOME", [EnvironmentVariableTarget]::Machine)
@@ -146,7 +146,7 @@ $svc = Get-Service "$solrName" -ErrorAction SilentlyContinue
 if(!($svc))
 {
     Write-Host "Installing Solr service"
-    &"$installFolder\nssm-$nssmVersion\win64\nssm.exe" install "$solrName" "$solrRoot\bin\solr.cmd" "-f" "-p $solrPort"
+    &"nssm.exe" install "$solrName" "$solrRoot\bin\solr.cmd" "-f" "-p $solrPort"
     $svc = Get-Service "$solrName" -ErrorAction SilentlyContinue
 }
 if($svc.Status -ne "Running")
@@ -154,11 +154,3 @@ if($svc.Status -ne "Running")
     Write-Host "Starting Solr service"
     Start-Service "$solrName"
 }
-
-# finally prove it's all working
-$protocol = "http"
-if($solrSSL -eq $true)
-{
-    $protocol = "https"
-}
-Invoke-Expression "start $($protocol)://$($solrHost):$solrPort/solr/#/"

@@ -61,6 +61,10 @@ Write-Host "Install SQL Server Management Studio"
 choco install sql-server-management-studio -Y | Out-Null
 Write-Host "END Install SQL Server Management Studio"
 
+Write-Host "Install Dotnet 4.7.2"
+choco install dotnet4.7.2 -Y | Out-Null
+Write-Host "END Install Dotnet 4.7.2"
+
 Write-Host "Install Dotnet Core"
 choco install dotnetcore -Y | Out-Null
 Write-Host "END Install Dotnet Core"
