@@ -29,7 +29,7 @@ Import-Module SitecoreInstallFramework -RequiredVersion 2.0.0
 
 $Prefix = "sc9"
 $SitecoreAdminPassword = "b"
-$SCInstallRoot = "C:\Provision\Sitecore 9.1.0 rev. 001564 (WDP XP0 packages)"
+$SCInstallRoot = "C:\Provision\Sitecore 9.1.1 rev. 002459 (WDP XP0 packages)"
 $XConnectSiteName = "sc9.xconnect"
 $SitecoreSiteName = "sc9.sc"
 $IdentityServerSiteName = "sc9.identityserver"
@@ -40,9 +40,9 @@ $SolrService = 'solr-7.2.1'
 $SqlServer = '.'
 $SqlAdminUser = 'sa'
 $SqlAdminPassword = 'SitecoreRocks!'
-$XConnectPackage = (Get-ChildItem "$SCInstallRoot\Sitecore 9.1.0 rev. 001564 (OnPrem)_xp0xconnect.scwdp.zip").FullName
-$SitecorePackage = (Get-ChildItem "$SCInstallRoot\Sitecore 9.1.0 rev. 001564 (OnPrem)_single.scwdp.zip").FullName
-$IdentityServerPackage = (Get-ChildItem "$SCInstallRoot\Sitecore.IdentityServer.2.0.0-r00157.scwdp.zip").FullName
+$XConnectPackage = (Get-ChildItem "$SCInstallRoot\Sitecore 9.1.1 rev. 002459 (OnPrem)_xp0xconnect.scwdp.zip").FullName
+$SitecorePackage = (Get-ChildItem "$SCInstallRoot\Sitecore 9.1.1 rev. 002459 (OnPrem)_single.scwdp.zip").FullName
+$IdentityServerPackage = (Get-ChildItem "$SCInstallRoot\Sitecore.IdentityServer.2.0.1-r00166.scwdp.zip").FullName
 $PasswordRecoveryUrl = "https://$SitecoreSiteName"
 $SitecoreIdentityAuthority = "https://$IdentityServerSiteName"
 $XConnectCollectionService = "https://$XConnectSiteName"

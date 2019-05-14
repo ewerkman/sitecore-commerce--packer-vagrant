@@ -1,7 +1,7 @@
 
-$SitecorePackageName = "Sitecore 9.1.0 rev. 001564 (WDP XP0 packages)"
-$SitecoreConfigName = "XP0 Configuration files 9.1.0 rev. 001564"
-$IdentityServerPackageName = "Sitecore.IdentityServer.2.0.0-r00157.scwdp"
+$SitecorePackageName = "Sitecore 9.1.1 rev. 002459 (WDP XP0 packages)"
+$SitecoreConfigName = "XP0 Configuration files 9.1.1 rev. 002459"
+$IdentityServerPackageName = "Sitecore.IdentityServer.2.0.1-r00166.scwdp"
 
 choco install jre8 --version 8.0.191 -Y
 choco install nssm -Y

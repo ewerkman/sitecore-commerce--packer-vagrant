@@ -74,9 +74,10 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "hyperv" do |v|
     v.memory = 8192
+    v.maxmemory = 12288
     v.cpus = 4
   end
 
   config.vm.provision "sitecore-xp", type: "shell", path: "scripts/install-sitecore-xp.ps1"
-  #config.vm.provision "sitecore-xc", type: "shell", path: "scripts/install-sitecore-xc.ps1"
+  config.vm.provision "sitecore-xc", type: "shell", path: "scripts/install-sitecore-xc.ps1"
 end
